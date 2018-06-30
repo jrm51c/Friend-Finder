@@ -131,7 +131,7 @@
     <h3><strong>Question 9</strong></h3>
     <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
     <select class="chosen-select" id="q9">
-      <option value=""></option>
+      <option class="question" value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -160,7 +160,7 @@
     <hr>
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends" target="_blank">API Friends List</a> | <a href="https://github.com/keiranevers/friendfinder" target="_blank">GitHub Repo</a></p>
+        <p><a href="/api/friends" target="_blank">API Friends List</a> | <a href="https://github.com/jrm51c/Friend-Finder" target="_blank">GitHub Repo</a></p>
       </div>
     </footer>
 
@@ -238,6 +238,7 @@
             $("#q10").val()
           ]
         };
+        clear();
         var currentURL = window.location.origin;
         // AJAX post the data to the friends API.
         $.post(currentURL + "/api/friends", userData, function(data) {
@@ -252,6 +253,14 @@
       }
       return false;
     });
+
+  // Function to clear form
+  function clear() {
+    alert("FUCK OFF");
+    alert($("#q1").val());
+    $(".form-control").val("");
+    $("#q1").val("");
+  }
   </script>
 
 </html>
